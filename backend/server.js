@@ -40,7 +40,7 @@ console.log(process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === "production") {
     console.log("inside");
-  app.use(express.static(path.join(__dirname1, "frontend/build")));
+  app.use(express.static(path.join(__dirname1, "/frontend/build")));
 
   app.get("*", (req, res) =>
     res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
