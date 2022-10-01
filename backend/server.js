@@ -12,12 +12,13 @@ const path = require("path");
 const { notFound, errorHandler}= require('./middleware/errorMiddleware')
 
 dotenv.config();
-app.use(cors());
 
 
 
 connectDB()
 const app = express();
+app.use(cors());
+
 
 app.use(express.json());
 
