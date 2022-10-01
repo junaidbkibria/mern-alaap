@@ -1,5 +1,5 @@
 const express = require("express");
-import cors from 'cors';
+const cors =  require("cors");
 const dotenv = require("dotenv");
 const { chats } = require("./data");
 const connectDB = require("./db");
