@@ -1,4 +1,5 @@
 const express = require("express");
+import cors from 'cors';
 const dotenv = require("dotenv");
 const { chats } = require("./data");
 const connectDB = require("./db");
@@ -11,6 +12,9 @@ const path = require("path");
 const { notFound, errorHandler}= require('./middleware/errorMiddleware')
 
 dotenv.config();
+app.use(cors());
+
+
 
 connectDB()
 const app = express();
